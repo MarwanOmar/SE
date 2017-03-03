@@ -1,0 +1,28 @@
+
+
+<% include partials/header %>
+
+<h1> <%= title %></h1>
+
+ 
+<form method="POST" action="/users/">
+
+	<label>User Name</label>
+	<input type="text" name="user_name">
+	<br>
+
+	<label>Password</label>
+	<input type="text" name="password">
+	<br><br>
+
+	<input type="submit" name="register">
+	<br>
+
+</form>
+
+<ul>
+<% users.forEach(function(user){ %>
+	<li><%= user.name %></li>
+<% }) %>
+</ul>
+<% include partials/footer %>
